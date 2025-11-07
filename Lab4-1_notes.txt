@@ -1,0 +1,23 @@
+python3 Lab4-1.py http://scanme.nmap.org
+[+] URL: http://scanme.nmap.org
+    Status Code: 200
+    Final URL:   http://scanme.nmap.org/
+    Content-Type: text/html
+    Server:       Apache/2.4.7 (Ubuntu)
+    Content-Length: 2068
+
+python3 Lab4-1.py http://example.com
+[+] URL: http://example.com
+    Status Code: 200
+    Final URL:   http://example.com/
+    Content-Type: text/html
+    Server:       N/A
+    Content-Length: 363
+
+python3 Lab4-1.py http://httpbin.org
+[+] URL: http://httpbin.org
+    Status Code: 503
+    Final URL:   http://httpbin.org/
+    Content-Type: text/html
+    Server:       awselb/2.0
+    Content-Length: 162
