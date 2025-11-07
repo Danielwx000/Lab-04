@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Go ahead and ScanMe!</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#2A0D45">
+<link rel="preload" as="image" href="/images/sitelogo.png" imagesizes="168px" imagesrcset="/images/sitelogo.png, /images/sitelogo-2x.png 2x">
+<link rel="preload" as="image" href="/shared/images/nst-icons.svg">
+<link rel="stylesheet" href="/shared/css/nst.css?v=2">
+<script async src="/shared/js/nst.js?v=2"></script>
+
+Asnwers:
+1. Go ahead and ScanMe
+
+2. <form class="nst-search" id="nst-head-search" action="/search/">
+    <input class="nst-search-q" name="q" type="search" placeholder="Site Search">
+    <button class="nst-search-button" title="Search">
+     <img style="width:100%;aspect-ratio:1/1;" alt="" aria-hidden="true"
+      src="/shared/images/nst-icons.svg#search">
+     </button>
+   </form>
+
+
+Command: curl -i  -A "MyTestAgent/1.0" https://httpbin.org/headers
+HTTP/2 200 
+date: Fri, 07 Nov 2025 09:57:50 GMT
+content-type: application/json
+content-length: 177
+server: gunicorn/19.9.0
+access-control-allow-origin: *
+access-control-allow-credentials: true
+
+{
+  "headers": {
+    "Accept": "*/*", 
+    "Host": "httpbin.org", 
+    "User-Agent": "MyTestAgent/1.0", 
+    "X-Amzn-Trace-Id": "Root=1-690dc29c-070cdfd852732592415c809b"
+  }
+}
+
+Command: curl -i  https://httpbin.org/headers
+HTTP/2 200 
+date: Fri, 07 Nov 2025 09:58:56 GMT
+content-type: application/json
+content-length: 172
+server: gunicorn/19.9.0
+access-control-allow-origin: *
+access-control-allow-credentials: true
+
+{
+  "headers": {
+    "Accept": "*/*", 
+    "Host": "httpbin.org", 
+    "User-Agent": "curl/8.5.0", 
+    "X-Amzn-Trace-Id": "Root=1-690dc2e0-4bf7f8c1390426c6186b89f0"
+  }
+}
+
+Did the response change (status, server header, content-length) when the User-Agent was MyTestAgent/1.0?
+1. User-Agent changed from curl to MyTestAgent.
+2. X-Amzn-Trace-Id changed.
+If it had changed, what could that mean about the server’s defenses?

@@ -1,0 +1,5 @@
+What three pieces of information from the steps above would be most useful in a reconnaissance report, and why?
+1. The user agent gives differnt information depending on which one you use.
+
+One quick defensive suggestion an admin could use to reduce information leakage from headers.
+1. Disable or mask server headers to mask software names of versions.
